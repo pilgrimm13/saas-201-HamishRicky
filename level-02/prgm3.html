@@ -1,0 +1,95 @@
+<html>
+<head>
+	<style>
+
+		input[type=text], select {
+  				width: 40%;
+  				padding: 12px 20px;
+  				margin: 8px 0;
+  				display: inline-block;
+  				border: 1px solid #ccc;
+  				border-radius: 4px;
+  				box-sizing: border-box;
+			}
+
+		.wrapper{
+			text-align:center;
+			
+		}
+
+		.button {
+  				background-color: gray;
+  				border: none;
+  				border-radius: 5px;
+  				color: white;
+  				padding: 10px 20px;
+  				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 12px;
+  				margin: 4px 2px;
+  				cursor: pointer;
+			}
+
+		.button2 {
+  				background-color: white;
+  				border: none;
+  				border-radius: 5px;
+  				color: black;
+  				padding: 10px 20px;
+  				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 12px;
+  				margin: 4px 2px;
+  				cursor: pointer;
+			}
+
+		#name{
+			float:left;
+		}
+
+		.labelWrapper{
+			padding-left: 390px;
+		}
+
+		.buttonWrapper{
+			padding-left: 700px;
+		}
+
+		
+		h3{
+			font-family:sans-serif;
+		}
+
+
+	</style>
+
+	</head>
+<body background="bg3.jpg">
+<form>
+	<div class="wrapper"><br><h3><font color="gray">REQUEST DEPARTMENT CHANGE</font></h3></div>
+	<div class="labelWrapper"><br>
+		<label for="rollnumber">Roll Number :</label></div>
+		<div class="wrapper">
+		<input type="text" name="rollnumber"><br>
+	</div>
+	<div class="labelWrapper">
+		<label for="dept">Select Department :</label></div>
+		<div class="wrapper">
+		<select id="dept">
+			<option value="cse">CSE</option>
+			<option value="ece">ECE</option>
+			<option value="eie">EIE</option>
+			<option value="it">IT</option>
+		</select>
+	</div> 
+	<br>
+	<div class="buttonWrapper">
+		<input class="button2" type="button" value="Go Back" onclick="window.location.href='index.html'">
+		<input class="button" type="submit" id="submit" value="Request">
+	</div>
+
+	</form>
+</body>
+</html>
