@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>College Registration </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+    <form class="registration-form" name="myform" onsubmit="return false">
+      <div class="form-group">
+        <label>Name </label>
+        <input type="text" name="name" required>
+      </div>
+      <div>
+        <label>Phone number </label>
+        <input type="number" name="phno" required>
+      </div>
+      <div>
+        <label>Email Address </label>
+        <input type="email" name="emailaddress" required>
+      </div>
+      <div>
+        <label>Primary Choice for Department </label>
+        <select id="d1" name="department1" class="department" onclick="DeptIssues(1)">
+          <option value="EEE">EEE</option>
+          <option value="MECH">MECH</option>
+          <option value="CSE">CSE</option>
+          <option value="CIVIL">CIVIL</option>
+        </select>
+      </div>
+      <div>
+        <label>Secondary Choice for Department </label>
+        <select id="d2" name="department2" class="department" onclick="DeptIssues(2)">
+          <option id="EEE" value="EEE">EEE</option>
+          <option id="MECH" value="MECH">MECH</option>
+          <option id="CSE" value="CSE">CSE</option>
+          <option id="CIVIL" value="CIVIL">CIVIL</option>
+        </select>
+      </div>
+
+      <button class="button" type="submit" onclick="return validateForm()"> Submit </button>
+      
+    </form>
+    <div id="results" class="results-section hide"></div>
+    <script src="trialScript.js"></script>
+  </body>
+</html>
