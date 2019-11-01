@@ -1,4 +1,4 @@
- <div class="row">
+<div class="row">
   <div class="col-md-10">
     <h2>Sections</h2>
   </div>
@@ -11,6 +11,6 @@
 
 <ul class="list-group">
   <% @sections.each do |section| %>
-    <li class="list-group-item"><a href="<%= students_path(section_id: section.id) %>">Section  <%= section.name %></li>
+    <li class="list-group-item"><a href="<%= students_path(section_id: section.id) %>"><%= section.name %></a></li>
   <% end %>
 </ul>

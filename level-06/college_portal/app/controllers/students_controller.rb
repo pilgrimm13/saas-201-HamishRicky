@@ -1,16 +1,21 @@
 class StudentsController < ApplicationController
-  def index
-    if params[:section_id]
-      @students = Student.where(section_id: params[:section_id]).all
-    else
-      @students = Student.all
-    end
-  end
-
-  def new
+	def index
+		if params[:section_id]
+			@students = Student.where(section_id: params[:section_id]).all
+		elsif params[:department_id]
+			@students = Student.where(department_id: params[:department_id]).all
+		else
+			@students = Student.all
+		end
+	end
+	def new
     @student = Student.new
     @department_collection = Department.all.collect { |p| [p.name, p.id] }
-    @section_collection = Section.all.collect { |p| [p.name, p.id] }
+    @section_collection = Section.all.collect{ |p| [p.name, p.id]}
+  end
+  def show
+  	@student=Student.find(params[:id])
+
   end
 
   def create
@@ -22,13 +27,10 @@ class StudentsController < ApplicationController
     end
   end
 
-  def show
-    @student = Student.find(params[:id])
-  end
-
   private
 
   def student_params
     params[:student].permit(:name, :department_id, :section_id)
   end
+
 end
